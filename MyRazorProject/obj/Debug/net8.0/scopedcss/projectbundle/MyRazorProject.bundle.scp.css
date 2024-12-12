@@ -1,0 +1,62 @@
+/* _content/MyRazorProject/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-6rxdubm2ya] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-6rxdubm2ya] {
+  color: #0077cc;
+}
+
+.btn-primary[b-6rxdubm2ya] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-6rxdubm2ya], .nav-pills .show > .nav-link[b-6rxdubm2ya] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-6rxdubm2ya] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-6rxdubm2ya] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-6rxdubm2ya] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-6rxdubm2ya] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+html[b-6rxdubm2ya], body[b-6rxdubm2ya] {
+    height: 100%;
+    margin: 0;
+}
+
+.container[b-6rxdubm2ya] {
+    flex: 1;
+}
+
+body[b-6rxdubm2ya] {
+    display: flex;
+    flex-direction: column;
+}
+
+footer[b-6rxdubm2ya] {
+    margin-top: auto;
+}
+
+
+

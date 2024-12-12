@@ -1,0 +1,67 @@
+@page
+@model MyRazorProject.Pages_About.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>AboutModel</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Name" class="control-label"></label>
+                <input asp-for="AboutModel.Name" class="form-control" />
+                <span asp-validation-for="AboutModel.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Nickname" class="control-label"></label>
+                <input asp-for="AboutModel.Nickname" class="form-control" />
+                <span asp-validation-for="AboutModel.Nickname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Email" class="control-label"></label>
+                <input asp-for="AboutModel.Email" class="form-control" />
+                <span asp-validation-for="AboutModel.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Phone" class="control-label"></label>
+                <input asp-for="AboutModel.Phone" class="form-control" />
+                <span asp-validation-for="AboutModel.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Birthday" class="control-label"></label>
+                <input asp-for="AboutModel.Birthday" class="form-control" />
+                <span asp-validation-for="AboutModel.Birthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Location" class="control-label"></label>
+                <input asp-for="AboutModel.Location" class="form-control" />
+                <span asp-validation-for="AboutModel.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Text1" class="control-label"></label>
+                <input asp-for="AboutModel.Text1" class="form-control" />
+                <span asp-validation-for="AboutModel.Text1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutModel.Text2" class="control-label"></label>
+                <input asp-for="AboutModel.Text2" class="form-control" />
+                <span asp-validation-for="AboutModel.Text2" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
