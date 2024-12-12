@@ -279,3 +279,4 @@ C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRa
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Debug\net8.0\publish\appsettings.json
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Debug\net8.0\publish\MyRazorProject.deps.json
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Debug\net8.0\publish\MyRazorProject.runtimeconfig.json
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\obj\Debug\net8.0\MyRazorProject.sourcelink.json
