@@ -274,3 +274,9 @@ C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRa
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\obj\Release\net8.0\MyRazorProject.pdb
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\obj\Release\net8.0\MyRazorProject.genruntimeconfig.cache
 C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\obj\Release\net8.0\ref\MyRazorProject.dll
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\obj\Release\net8.0\MyRazorProject.sourcelink.json
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Release\net8.0\publish\web.config
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Release\net8.0\publish\appsettings.json
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Release\net8.0\publish\MyRazorProject.deps.json
+C:\Users\DUc\OneDrive - The University of Technology\DUT\HK9\TTTN\myproject\MyRazorProject\bin\Release\net8.0\publish\MyRazorProject.runtimeconfig.json

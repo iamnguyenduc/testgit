@@ -17,3 +17,15 @@ public class PrivacyModel : PageModel
     }
 }
 
+// {
+//   "ConnectionStrings": {
+//   "DefaultConnection": "Server=LAPTOP-6DA74A8K\\SQLEXPRESS;Database=MyWeb2;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
+// },
+//   "Logging": {
+//     "LogLevel": {
+//       "Default": "Information",
+//       "Microsoft.AspNetCore": "Warning"
+//     }
+//   },
+//   "AllowedHosts": "*"
+// }

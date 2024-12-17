@@ -40,10 +40,23 @@ button.accept-policy[b-6rxdubm2ya] {
   line-height: inherit;
 }
 
-.footer[b-6rxdubm2ya] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+html[b-6rxdubm2ya], body[b-6rxdubm2ya] {
+    height: 100%;
+    margin: 0;
 }
+
+.container[b-6rxdubm2ya] {
+    flex: 1;
+}
+
+body[b-6rxdubm2ya] {
+    display: flex;
+    flex-direction: column;
+}
+
+footer[b-6rxdubm2ya] {
+    margin-top: auto;
+}
+
+
+

@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "MyRazorProject\\bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/91d81c2d-2e79-4239-bef4-329936c81a23/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/duc291002"
+}
