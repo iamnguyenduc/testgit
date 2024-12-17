@@ -4,9 +4,41 @@
     ViewData["Title"] = "Home";
 }
 
+<!-- CSS -->
+<style>
+    body {
+        background: url('/images/bg.jpg') no-repeat center center;
+        background-size: cover; 
+        height: 100vh;
+        margin: 0;
+        color: rgb(0, 0, 0); 
+        font-family: Arial, sans-serif; 
+    }
+    .main-content {
+        position: absolute; 
+        top: 28%;
+        left: 20%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+    .side-image {
+        position: absolute;
+        left: 50%; 
+        top: 40%;
+        transform: translateY(-50%);
+        max-width: 300px;
+        height: auto;
+        border-radius: 40px;
+    }
+</style>
+
 <div class="main-content">
     <h1>Hi, I'm ABCXYZ</h1>
     <h1>a freelancer</h1>
     <a class="btn btn-danger" href="/About">ABOUT ME</a>
     <a class="btn btn-outline-danger" href="/Works">MY WORK</a>
 </div>
+<img class="side-image" src="/images/photo.jpg" alt="Photo">

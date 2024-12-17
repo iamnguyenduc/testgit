@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\MyRazorProject\\MyRazorProject.csproj": {}
+    "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\MyRazorProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\MyRazorProject\\MyRazorProject.csproj": {
+    "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\MyRazorProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\MyRazorProject\\MyRazorProject.csproj",
+        "projectUniqueName": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\MyRazorProject.csproj",
         "projectName": "MyRazorProject",
-        "projectPath": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\MyRazorProject\\MyRazorProject.csproj",
+        "projectPath": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\MyRazorProject.csproj",
         "packagesPath": "C:\\Users\\DUc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\MyRazorProject\\obj\\",
+        "outputPath": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DUc\\AppData\\Roaming\\NuGet\\NuGet.Config"
