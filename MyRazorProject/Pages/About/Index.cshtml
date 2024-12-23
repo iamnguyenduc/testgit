@@ -5,53 +5,127 @@
     ViewData["Title"] = "About Me";
     var about = Model.AboutModel.FirstOrDefault();
 }
-<div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
-        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
-            <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
-                <div class="card-body">
-                    <div class="row"> @* Loại bỏ justify-content-center để căn trái *@
-        <div class="col-md-2 text-center"> @* Cột cho ảnh, căn giữa theo chiều ngang *@
-            <img src="/images/photo.jpg" class="rounded-circle img-fluid" alt="Profile Image" style="max-width: 175px; height: auto;"> @* img-fluid để ảnh responsive *@
-        </div>
-        <div class="col-md-4"> @* Cột cho thông tin cá nhân *@
-            <h3 class="fw-bold">@about?.Name</h3>
-            <p class="text-muted">@about?.Nickname</p>
-            
-        </div>
-        <div class=" col-md-3">
-            <ul class="list-unstyled">
-                <h6 class="text-muted">Email</h6> 
-                <h6>@about?.Email</h6>
-                <h6 class="text-muted">Phone</h6>
-                <h6>@about?.Phone</h6>
-            </ul>
-        </div>
-        <div class=" col-md-3">
-            <ul class="list-unstyled">
-                <h6 class="text-muted">Birthday</h6> 
-                <h6>@about?.Birthday?.ToString("dd MMM yyyy")</h4>
-                <h6 class="text-muted">Location</h6> 
-                <h6>@about?.Location</h4>
-            </ul>
-        </div>
-    </div>
-                </div>
-            </div>
-    </div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+    body {
+        background: url('/images/bg.jpg') no-repeat center center;
+        background-size: cover; 
+        height: 100vh;
+        margin: 0;
+        color: rgb(0, 0, 0); 
+        font-family: Arial, sans-serif; 
+    }
+</style>
 <div class="container mt-5">
-    <div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
-        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
-            <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">About Me</h5>
-                    <p class="card-text">@about?.Text1</p>
+        <div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+            <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+                <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                    <div class="card-body">
+                        <div class="row"> @* Loại bỏ justify-content-center để căn trái *@
+            <div class="col-md-2 text-center"> @* Cột cho ảnh, căn giữa theo chiều ngang *@
+                <img src="/images/photo.jpg" class="rounded-circle img-fluid" alt="Profile Image" style="max-width: 175px; height: auto;"> @* img-fluid để ảnh responsive *@
+            </div>
+            <div class="col-md-4" style="margin-top: 50px;"> @* Cột cho thông tin cá nhân *@
+                <h3 class="fw-bold">@about?.Name</h3>
+                <p class="text-muted">@about?.Nickname</p>
+                <div class="mt-3"> 
+                    @* Thêm khoảng cách giữa thông tin và các icon *@
+                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                        <i class="fab fa-facebook" style="font-size: 30px; color: #4267B2; margin-right: 10px;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                        <i class="fab fa-instagram" style="font-size: 30px; color: #C13584; margin-right: 10px;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                        <i class="fab fa-telegram" style="font-size: 30px; color: #0088cc;"></i>
+                    </a>
                 </div>
             </div>
+            <div class=" col-md-3" style="margin-top: 20px;">
+                <ul class="list-unstyled">
+                    <h6 class="text-muted">Email</h6> 
+                    <h6>@about?.Email</h6>
+                    <h6 class="text-muted">Phone</h6>
+                    <h6>@about?.Phone</h6>
+                </ul>
+            </div>
+            <div class=" col-md-3" style="margin-top: 20px;">
+                <ul class="list-unstyled">
+                    <h6 class="text-muted">Birthday</h6> 
+                    <h6>@about?.Birthday?.ToString("dd MMM yyyy")</h4>
+                    <h6 class="text-muted">Location</h6> 
+                    <h6>@about?.Location</h4>
+                </ul>
+            </div>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+            <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+                <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">About Me</h5>
+                        <p class="card-text">@about?.Text1</p>
+                    </div>
+                </div>
 
-            <div class="card shadow-sm"> @* Card cho What I Am Doing *@
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">What I Am Doing</h5>
-                    <p class="card-text">@about?.Text2</p>
+                <div class="card shadow-sm"> @* Card cho What I Am Doing *@
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">What I Am Doing</h5>
+                        <p class="card-text">@about?.Text2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="container mt-5">
+</div>
+<div class='mt-1'>
+    <h2 class='title title--h3'>What I&#39;m Doing</h2>
+    <div class='row'>
+        <!-- Case Item -->
+        <div class='col-12 col-lg-6'>
+            <div class='case-item'>
+                <img alt='' class='case-item__icon' src='https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icon-design.svg'/>
+                <div>
+                    <h3 class='title title--h4'>Web Design</h3>
+                    <p class='case-item__caption'>The most modern and high-quality design made at a professional level.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Item -->
+        <div class='col-12 col-lg-6'>
+            <div class='case-item'>
+                <img alt='' class='case-item__icon' src='https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icon-dev.svg'/>
+                <div>
+                    <h3 class='title title--h4'>Web Development</h3>
+                    <p class='case-item__caption'>High-quality development of sites at the professional level.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Item -->
+        <div class='col-12 col-lg-6'>
+            <div class='case-item'>
+                <img alt='' class='case-item__icon' src='https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icon-app.svg'/>
+                <div>
+                    <h3 class='title title--h4'>Mobile Apps</h3>
+                    <p class='case-item__caption'>Professional development of applications for iOS and Android.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Item -->
+        <div class='col-12 col-lg-6'>
+            <div class='case-item'>
+                <img alt='' class='case-item__icon' src='https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icon-photo.svg'/>
+                <div>
+                    <h3 class='title title--h4'>Photography</h3>
+                    <p class='case-item__caption'>I make high-quality photos of any category at a professional level.</p>
                 </div>
             </div>
         </div>
@@ -59,6 +133,20 @@
 </div>
 
 <style>
+    a {
+    text-decoration: none !important; 
+    outline: none !important;        
+    border: none !important;         
+    box-shadow: none !important;     
+    }
+    a i {
+    text-decoration: none; /* Xóa gạch chân */
+    }
+
+    a:focus, a:hover {
+        outline: none; /* Xóa đường viền focus nếu có */
+        text-decoration: none;
+    }
     .card {
         border: none;
         border-radius: 10px;
