@@ -3,71 +3,77 @@
 
 @{
     ViewData["Title"] = "About Me";
+    var about = Model.AboutModel.FirstOrDefault();
 }
+<div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+            <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                <div class="card-body">
+                    <div class="row"> @* Loại bỏ justify-content-center để căn trái *@
+        <div class="col-md-2 text-center"> @* Cột cho ảnh, căn giữa theo chiều ngang *@
+            <img src="/images/photo.jpg" class="rounded-circle img-fluid" alt="Profile Image" style="max-width: 175px; height: auto;"> @* img-fluid để ảnh responsive *@
+        </div>
+        <div class="col-md-4"> @* Cột cho thông tin cá nhân *@
+            <h3 class="fw-bold">@about?.Name</h3>
+            <p class="text-muted">@about?.Nickname</p>
+            
+        </div>
+        <div class=" col-md-3">
+            <ul class="list-unstyled">
+                <h6 class="text-muted">Email</h6> 
+                <h6>@about?.Email</h6>
+                <h6 class="text-muted">Phone</h6>
+                <h6>@about?.Phone</h6>
+            </ul>
+        </div>
+        <div class=" col-md-3">
+            <ul class="list-unstyled">
+                <h6 class="text-muted">Birthday</h6> 
+                <h6>@about?.Birthday?.ToString("dd MMM yyyy")</h4>
+                <h6 class="text-muted">Location</h6> 
+                <h6>@about?.Location</h4>
+            </ul>
+        </div>
+    </div>
+                </div>
+            </div>
+    </div>
+<div class="container mt-5">
+    <div class="row mt-4"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+            <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">About Me</h5>
+                    <p class="card-text">@about?.Text1</p>
+                </div>
+            </div>
 
-@* <h1>Index</h1> *@
+            <div class="card shadow-sm"> @* Card cho What I Am Doing *@
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">What I Am Doing</h5>
+                    <p class="card-text">@about?.Text2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-@* <p>
-    <a asp-page="Create">Create New</a>
-</p> *@
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Nickname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Birthday)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AboutModel[0].Location)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.AboutModel) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nickname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Birthday)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+    }
 
-<h2 style="color: blue;">About Me</h2>
-<h3>@Model.AboutModel.FirstOrDefault()?.Text1</h3>
+    .card-body {
+        padding: 1.5rem;
+    }
 
-<h2 style="color: blue;">What Iam Doing</h2>
+    .list-unstyled li {
+        margin-bottom: 0.5rem;
+    }
 
-<h3>@Model.AboutModel.FirstOrDefault()?.Text2</h3>
+    .list-unstyled strong {
+        color: #333;
+        font-weight: bold;
+    }
+</style>
