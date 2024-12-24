@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\photo.jpg"
     },
     {
+      "Id": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\wwwroot\\images\\photo2.jpg",
+      "PackagePath": "staticwebassets\\images\\photo2.jpg"
+    },
+    {
       "Id": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

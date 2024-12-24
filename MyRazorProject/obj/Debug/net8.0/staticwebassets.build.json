@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7/hCEQcAXGJipuogcoYefb+VRPGmb+9MCiqJrPP2z2E=",
+  "Hash": "5iwXubLbJ0/9Yx7FW7Okc0/hHpKyU7KzayE3ebxxv60=",
   "Source": "MyRazorProject",
   "BasePath": "_content/MyRazorProject",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\photo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\wwwroot\\images\\photo2.jpg",
+      "SourceId": "MyRazorProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\wwwroot\\",
+      "BasePath": "_content/MyRazorProject",
+      "RelativePath": "images/photo2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo2.jpg"
     },
     {
       "Identity": "C:\\Users\\DUc\\OneDrive - The University of Technology\\DUT\\HK9\\TTTN\\myproject\\myrazorproject\\wwwroot\\js\\site.js",
