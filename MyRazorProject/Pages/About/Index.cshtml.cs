@@ -10,20 +10,28 @@ using MyRazorProject.Models;
 
 namespace MyRazorProject.Pages_About
 {
-    public class IndexModel : PageModel
+  public class IndexModel : PageModel
+{
+    private readonly ApplicationDbContext _context;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public IndexModel(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
     {
-        private readonly MyRazorProject.Data.ApplicationDbContext _context;
-
-        public IndexModel(MyRazorProject.Data.ApplicationDbContext context)
-        {
-            _context = context;
-        }
-
-        public IList<AboutModel> AboutModel { get;set; } = default!;
-
-        public async Task OnGetAsync()
-        {
-            AboutModel = await _context.AboutList.ToListAsync();
-        }
+        _context = context;
+        _httpContextAccessor = httpContextAccessor;
     }
+
+    public IList<AboutModel> AboutModel { get; set; } = default!;
+
+    // Add a public property or method to expose session data
+    public bool IsLoggedIn => !string.IsNullOrEmpty(_httpContextAccessor.HttpContext.Session.GetString("Username"));
+
+
+    public async Task OnGetAsync()
+    {
+        AboutModel = await _context.AboutList.ToListAsync();
+    }
+}
+
+
 }

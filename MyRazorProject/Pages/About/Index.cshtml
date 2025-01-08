@@ -4,121 +4,134 @@
 @{
     ViewData["Title"] = "About Me";
     var about = Model.AboutModel.FirstOrDefault();
+      var isLoggedIn = Model.IsLoggedIn; 
 }
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <style>
     body {
         background: url('/images/bg.jpg') repeat center center;
-        background-size: cover; 
+        background-size: cover;
         height: 100vh;
         margin: 0;
-        color: rgb(0, 0, 0); 
-        font-family: Arial, sans-serif; 
+        color: rgb(0, 0, 0);
+        font-family: Arial, sans-serif;
     }
 </style>
-<div class="container" >
-        <div class="row mt-5"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
-            <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
-                <div class="card shadow-sm mb-4" style="background-color: #fdfdfd;"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
-                    <div class="card-body">
-                        <div class="row"> @* Loại bỏ justify-content-center để căn trái *@
-            <div class="col-md-2 text-center"> @* Cột cho ảnh, căn giữa theo chiều ngang *@
-                <img src="/images/photo2.jpg" class="rounded-circle img-fluid avatar" alt="Profile Image" style="max-width: 175px; height: auto;"> @* img-fluid để ảnh responsive *@
-            </div>
-            @* <p>
-                <a asp-page="Create">Create New</a>
-            </p>
-            <div>
-                @foreach (var AboutModel in Model.AboutModel)
-            {
-                <tr>
-                    <td>
-                        <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@AboutModel.Id">Sửa</a>
-                        <a class="btn btn-danger btn-sm" asp-page="./Delete" asp-route-id="@AboutModel.Id">Xóa</a>
-                        <a class="btn btn-info btn-sm" asp-page="./Details" asp-route-id="@AboutModel.Id">Chi tiết</a>
-                    </td>
-                </tr>
-            }
-            </div> *@
-            <div class="col-md-4" style="margin-top: 0px; margin-left: 20px;"> @* Cột cho thông tin cá nhân *@
-                <h3 class="fw-bold">@about?.Name</h3>
-                <p class="text-muted">@about?.Nickname</p>
-                <div class="mt-1" style="margin-top: -10px !important;"> 
-                    @* Thêm khoảng cách giữa thông tin và các icon *@
-                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
-                        <i class="fab fa-facebook" style="font-size: 20px; color: #4267B2; margin-right: 10px;"></i>
-                    </a>
-                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
-                        <i class="fab fa-instagram" style="font-size: 20px; color: #C13584; margin-right: 10px;"></i>
-                    </a>
-                    <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
-                        <i class="fab fa-telegram" style="font-size: 20px; color: #0088cc;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class=" col-md-3" style="margin-top: 10px;">
-                <ul class="list-unstyled">
-                    <h6 class="text-muted">Email</h6> 
-                    <h6>@about?.Email</h6>
-                    <h6 class="text-muted">Phone</h6>
-                    <h6>@about?.Phone</h6>
-                </ul>
-            </div>
-            <div class=" col-md-2" style="margin-top: 10px; margin-right: 10px;">
-                <ul class="list-unstyled">
-                    <h6 class="text-muted">Birthday</h6> 
-                    <h6>@about?.Birthday?.ToString("dd MMM yyyy")</h4>
-                    <h6 class="text-muted">Location</h6> 
-                    <h6>@about?.Location</h4>
-                </ul>
-            </div>
-        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-3"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
-            <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
-                <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">About Me</h5>
-                        <p class="card-text">@Html.Raw(about?.Text1?.Replace("\n", "<br>"))</p>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row mt-5"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+            <div class="card shadow-sm mb-4" style="background-color: #fdfdfd;"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                <div class="card-body">
+                    <div class="row"> @* Loại bỏ justify-content-center để căn trái *@
+                        <div class="col-md-2 text-center"> @* Cột cho ảnh, căn giữa theo chiều ngang *@
+                            <img src="/images/photo2.jpg" class="rounded-circle img-fluid avatar" alt="Profile Image"
+                                style="max-width: 175px; height: auto;"> @* img-fluid để ảnh responsive *@
+                        </div>
 
-                <div class="card shadow-sm"> @* Card cho What I Am Doing *@
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">What I Am Doing</h5>
-                        <p class="card-text">@Html.Raw(about?.Text2?.Replace("\n", "<br>"))</p>
+
+                        @if (isLoggedIn)
+                        {
+                            @foreach (var AboutModel in Model.AboutModel)
+                         {
+                            <div class="btn-group">
+                                <a class="btn btn-primary btn-sm" asp-page="./Create"  >Create New</a>
+                                <a class="btn btn-info btn-sm" asp-page="./Edit" asp-route-id="@AboutModel.Id">Edit</a>
+                                <a class="btn btn-danger btn-sm" asp-page="./Delete" asp-route-id="@AboutModel.Id">Delete</a>
+                                <a class="btn btn-warning btn-sm" asp-page="./Details" asp-route-id="@AboutModel.Id">Detail</a>
+                            </div>
+                        }
+                        }
+                        else
+                        {
+                            <a class="btn btn-success" href="/About/Login">Đăng nhập</a>
+                        }
+                        <div class="col-md-4" style="margin-top: 0px; margin-left: 20px;"> @* Cột cho thông tin cá nhân *@
+                            <h3 class="fw-bold">@about?.Name</h3>
+                            <p class="text-muted">@about?.Nickname</p>
+                            <div class="mt-1" style="margin-top: -10px !important;">
+                                @* Thêm khoảng cách giữa thông tin và các icon *@
+                                <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                                    <i class="fab fa-facebook"
+                                        style="font-size: 20px; color: #4267B2; margin-right: 10px;"></i>
+                                </a>
+                                <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                                    <i class="fab fa-instagram"
+                                        style="font-size: 20px; color: #C13584; margin-right: 10px;"></i>
+                                </a>
+                                <a href="https://www.facebook.com/iamnguyenduc" target="_blank">
+                                    <i class="fab fa-telegram" style="font-size: 20px; color: #0088cc;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" col-md-3" style="margin-top: 10px;">
+                            <ul class="list-unstyled">
+                                <h6 class="text-muted">Email</h6>
+                                <h6>@about?.Email</h6>
+                                <h6 class="text-muted">Phone</h6>
+                                <h6>@about?.Phone</h6>
+                            </ul>
+                        </div>
+                        <div class=" col-md-2" style="margin-top: 10px; margin-right: 10px;">
+                            <ul class="list-unstyled">
+                                <h6 class="text-muted">Birthday</h6>
+                                <h6>@about?.Birthday?.ToString("dd MMM yyyy")</h4>
+                                    <h6 class="text-muted">Location</h6>
+                                    <h6>@about?.Location</h4>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="row mt-3"> @* Các phần About Me và What I Am Doing, không cần justify-content-center *@
+        <div class="col-md-12"> @* Chiếm toàn bộ chiều rộng *@
+            <div class="card shadow-sm mb-4"> @* Thêm margin bottom để tạo khoảng cách giữa các card *@
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">About Me</h5>
+                    <p class="card-text">@Html.Raw(about?.Text1?.Replace("\n", "<br>"))</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm"> @* Card cho What I Am Doing *@
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">What I Am Doing</h5>
+                    <p class="card-text">@Html.Raw(about?.Text2?.Replace("\n", "<br>"))</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container mt-5">
 </div>
 
 <style>
     .avatar {
-    margin-top: -70px;
-    margin-left: 30px;
-    border: 6px solid white;
-    }
-    a {
-    text-decoration: none !important; 
-    outline: none !important;        
-    border: none !important;         
-    box-shadow: none !important;     
-    }
-    a i {
-    text-decoration: none; /* Xóa gạch chân */
+        margin-top: -70px;
+        margin-left: 30px;
+        border: 6px solid white;
     }
 
-    a:focus, a:hover {
-        outline: none; /* Xóa đường viền focus nếu có */
+    a {
+        text-decoration: none !important;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    a i {
+        text-decoration: none;
+        /* Xóa gạch chân */
+    }
+
+    a:focus,
+    a:hover {
+        outline: none;
+        /* Xóa đường viền focus nếu có */
         text-decoration: none;
     }
+
     .card {
         border: none;
         border-radius: 10px;
@@ -136,8 +149,11 @@
         color: #333;
         font-weight: bold;
     }
+
     .card-text {
-        text-align: justify;  /* Căn giãn đều văn bản */
-        text-justify: inter-word; /* Đảm bảo khoảng cách giữa các từ sẽ được giãn đều */
+        text-align: justify;
+        /* Căn giãn đều văn bản */
+        text-justify: inter-word;
+        /* Đảm bảo khoảng cách giữa các từ sẽ được giãn đều */
     }
 </style>

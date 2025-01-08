@@ -44,6 +44,8 @@
 
     <main class="flex-grow-1 container mt-4">
         @RenderBody()
+        @RenderSection("Scripts", required: false)
+
     </main>
 
     <footer class="footer bg-light text-center py-3 border-top">
